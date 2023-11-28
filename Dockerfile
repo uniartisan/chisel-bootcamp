@@ -9,6 +9,8 @@ RUN \
         graphviz \
         openjdk-8-jre-headless \
         python3-distutils \
+        build-essential \
+        python3-dev \
         && \
     rm -rf /var/lib/apt/lists/*
 
@@ -60,7 +62,7 @@ FROM base as final
 COPY --from=intermediate-builder /coursier_cache/ /coursier_cache/
 COPY --from=intermediate-builder /usr/local/share/jupyter/kernels/scala/ /usr/local/share/jupyter/kernels/scala/
 
-RUN chown -R bootcamp:bootcamp /chisel-bootcamp
+RUN chown -R bootcamp:bootcamp /chisel-bootcamp ${COURSIER_CACHE}
 
 USER bootcamp
 WORKDIR /chisel-bootcamp

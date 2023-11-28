@@ -2,6 +2,9 @@
 
 **_For previous users of the bootcamp, we have upgraded from Scala 2.11 to Scala 2.12. If you are encountering errors, please follow the installation instructions to upgrade to 2.12._**
 
+
+[![Publish Docker image](https://github.com/uniartisan/chisel-bootcamp/actions/workflows/docker.yml/badge.svg)](https://github.com/uniartisan/chisel-bootcamp/actions/workflows/docker.yml)
+
 # Chisel Bootcamp
 
 Elevate the level of your hardware design from instances to generators!
