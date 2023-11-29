@@ -38,6 +38,7 @@ RUN cp source/custom.js $JUPYTER_CONFIG_DIR/custom/
 FROM base as intermediate-builder
 
 RUN mkdir /coursier_cache
+RUN mkdir -p /jupyter/config/
 
 RUN \
     curl -L -o coursier https://git.io/coursier-cli && \
@@ -62,7 +63,7 @@ FROM base as final
 COPY --from=intermediate-builder /coursier_cache/ /coursier_cache/
 COPY --from=intermediate-builder /usr/local/share/jupyter/kernels/scala/ /usr/local/share/jupyter/kernels/scala/
 
-RUN chown -R bootcamp:bootcamp /chisel-bootcamp ${COURSIER_CACHE}
+RUN chown -R bootcamp:bootcamp /chisel-bootcamp ${COURSIER_CACHE} /jupyter/config/
 
 USER bootcamp
 WORKDIR /chisel-bootcamp
