@@ -17,10 +17,10 @@ Make sure you have Docker [installed](https://docs.docker.com/get-docker/) on yo
 Run the following command:
 
 ```
-docker run -it --rm -p 8888:8888 ucbbar/chisel-bootcamp
+docker run -it --rm -p 8888:8888 uniartisan/chisel-bootcamp
 ```
 
-This will download a Dokcer image for the bootcamp and run it. The output will end in the following message:
+This will download a Docker image for the bootcamp and run it. The output will end in the following message:
 
 ```
     To access the notebook, open this file in a browser:
@@ -117,6 +117,8 @@ Find more details on this [here](http://www.thewindowsclub.com/how-to-run-comman
 and other places.
 It is also best to relauch any command windows between steps in the process (e.g. after installing Java)
 so that any newly installed software will be recognized.
+
+I personally recommend using `WSL` to install `Ubuntu`, and then follow the instructions above or use Docker to install.
 
 #### Be sure Java is installed (ideally Java 8).
 If you type `java` into a command prompt and it says command not found, you need to install

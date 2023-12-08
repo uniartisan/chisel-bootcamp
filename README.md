@@ -5,11 +5,39 @@
 
 [![Publish Docker image](https://github.com/uniartisan/chisel-bootcamp/actions/workflows/docker.yml/badge.svg)](https://github.com/uniartisan/chisel-bootcamp/actions/workflows/docker.yml)
 
+This is my personal repair of the Docker version. The original Docker cannot run normally after restarting. At the same time, I did some Chinese translation, and there may be some notes in the learning process.
+
+Start quickly:
+```
+docker run -it --name chisel -p 8888:8888 uniartisan/chisel-bootcamp
+```
+
+This will download a Docker image for the bootcamp and run it. The output will end in the following message:
+```
+        file:///home/bootcamp/.local/share/jupyter/runtime/nbserver-6-open.html
+        http://79b8df8411f2:8888/?token=LONG_RANDOM_TOKEN
+		http://127.0.0.1:8888/?token=LONG_RANDOM_TOKEN
+```
+
+
+Copy the last link, the one starting with https://, to your browser and follow the Bootcamp.
+
+
+
 # Chisel Bootcamp
 
 Elevate the level of your hardware design from instances to generators!
 This bootcamp teaches you Chisel, a Berkeley hardware construction DSL written in Scala.
 It teaches you Scala along the way, and it frames the learning of Chisel on the idea of *hardware generators*.
+
+## Multi-language version
+
+There are two versions of this document, one in Chinese and one in English.
+本文档提供中文和英文两个版本。
+
+- [English](https://github.com/uniartisan/chisel-bootcamp/blob/master/README.md)
+- [中文版](https://github.com/uniartisan/chisel-bootcamp/blob/master/README_cn.md)
+
 
 ## What you'll learn
 
