@@ -3,6 +3,7 @@ FROM ubuntu:latest as base
 
 RUN \
     apt-get update && \
+    apt upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
         ca-certificates-java \
         curl \
