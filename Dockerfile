@@ -1,5 +1,5 @@
 # First stage : setup the system and environment
-FROM ubuntu:20.04 as base
+FROM ubuntu:latest as base
 
 RUN \
     apt-get update && \
